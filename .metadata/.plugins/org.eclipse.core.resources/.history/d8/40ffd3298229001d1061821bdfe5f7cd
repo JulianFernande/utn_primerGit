@@ -1,0 +1,57 @@
+/*
+ ============================================================================
+ Name        : terceraClase.c
+ Author      : Julian E Fernandez
+******* FUNCIONES *********
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int sumarDosEnteros(int primerNumero, int segundoNumero); // se declara la funcion antes
+//del main.
+int main(void) {
+
+	char operador;
+	int numeroUno;
+	int numeroDos;
+	int resultado;
+
+	switch(operador){
+	case '+':
+		resultado=sumarDosEnteros(numeroUno, numeroDos);
+		break;
+
+	case '/':
+		resultado=dividorDosEnteros(numeroUno, numeroDos);
+		if(resultado ==-1){
+			printf("\nNo se puede dividir por cero");
+		}
+	}
+	return EXIT_SUCCESS;
+};
+
+// en cada funcion hay que definir nuevamente variables!
+//las variables no son globales, pertenecen a cada funcion
+// las variables deben ser del mismo tipo
+
+
+int sumarDosEnteros(int numeroUno, int numeroDos){
+	int resultado;
+	resultado= numeroUno + numeroDos;
+	return resultado;
+};
+
+int dividirDosEnteros(int primerNumero, int segundoNumero){
+	int division;
+	int retorno=0; //se usa para ver si la funcion anda bien o mal
+	// ya que no se puede dividir por cero
+
+	if(segundoNumero !=0){
+		division= primerNumero / segundoNumero;
+	}else{
+		retorno =-1;
+	};
+	return retorno;
+}

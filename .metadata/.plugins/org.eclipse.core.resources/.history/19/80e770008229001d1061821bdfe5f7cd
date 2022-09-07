@@ -1,0 +1,23 @@
+/*
+ ============================================================================
+ Name        : terceraClase.c
+ Author      : Julian E Fernandez
+******* FUNCIONES *********
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+	puts(""); /* prints  */
+	return EXIT_SUCCESS;
+};
+// en cada funcion hay que definir nuevamente variables!
+
+int sumarDosEnteros(int numeroUno, int numeroDos){
+	int resultado;
+	resultado= numeroUno + numeroDos;
+	return resultado;
+};

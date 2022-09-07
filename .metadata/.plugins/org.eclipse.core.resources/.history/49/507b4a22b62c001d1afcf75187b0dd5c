@@ -1,0 +1,41 @@
+/*
+ ============================================================================
+ Name        : temaTres3-2.c
+ Author      : Julian E Fernandez
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+int parOimpar(int numUno);
+int main(void) {
+	setbuf(stdout, NULL);
+	int numeroIngresado;
+	int retornoMain;
+
+	printf("Ingrese un numero\n");
+	scanf("%d", &numeroIngresado);
+
+	retornoMain=parOimpar(numeroIngresado);
+
+	if(retornoMain== 1){
+		printf("El numero es par\n");
+	}else{
+		printf("El numero es impar\n");
+	};
+	return 0;
+}
+
+int parOimpar(int numUno){
+	int retorno;
+	if(numUno%2 == 0){
+
+		retorno=1;
+	}else{
+		retorno=0;
+	}
+	return retorno;
+}
